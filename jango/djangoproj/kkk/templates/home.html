@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+kkk | Home
+{% endblock title %}
+
+
+{% block content %}  
+<!--form action='add' method='get'-->
+<!--<form action='add' method='post'>
+    {% csrf_token %}
+    <input type="number" name="num1">
+    <input type="number" name="num2">
+    <input type="submit">
+</form>
+<h1>current time in server:{{ currentTime }}</h1>
+<h1>Length:{{"Hello World" | length}}</h1> 
+<h1>Lower:{{"Hello World" | lower}}</h1>
+<h1>Upper:{{"Hello World" | upper}}</h1>
+<h1>Home page</h1>-->
+<!-- {% for k in todos %}
+{{k.name}} {{k.completed}}
+{% endfor %} -->
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for i in todos %}
+      <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.completed}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+</table>  
+{% endblock %}
